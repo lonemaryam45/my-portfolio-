@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dr. Ali Clinic | General Physician</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#f8f9fb;
+    color:#333;
+    line-height:1.6;
+}
+
+.container{
+    width:90%;
+    max-width:1100px;
+    margin:auto;
+}
+
+header{
+    background:linear-gradient(rgba(44,90,160,.85),rgba(44,90,160,.85)),
+    url("https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=1400&q=80") center/cover;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color:#fff;
+}
+
+header h1{
+    font-size:3rem;
+    margin-bottom:15px;
+}
+
+header p{
+    font-size:1.2rem;
+    margin-bottom:25px;
+}
+
+.btn{
+    display:inline-block;
+    background:#ff6b35;
+    color:#fff;
+    padding:14px 35px;
+    text-decoration:none;
+    border-radius:6px;
+    transition:.3s;
+}
+
+.btn:hover{
+    background:#e85a28;
+    transform:scale(1.05);
+}
+
+section{
+    padding:70px 0;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:40px;
+    font-size:2.2rem;
+    color:#2c5aa0;
+}
+
+.services-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+.card{
+    background:#fff;
+    border-radius:10px;
+    padding:25px;
+    text-align:center;
+    box-shadow:0 5px 15px rgba(0,0,0,.1);
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+}
+
+.card h3{
+    color:#2c5aa0;
+    margin-bottom:15px;
+}
+
+.about{
+    background:#fff;
+}
+
+.about p{
+    max-width:800px;
+    margin:auto;
+    text-align:center;
+    font-size:18px;
+}
+
+.contact{
+    background:#2c5aa0;
+    color:#fff;
+}
+
+.contact h2{
+    text-align:center;
+    margin-bottom:15px;
+}
+
+.contact p{
+    text-align:center;
+    margin-bottom:25px;
+}
+
+form{
+    max-width:550px;
+    margin:auto;
+}
+
+input,
+textarea{
+    width:100%;
+    padding:14px;
+    margin:10px 0;
+    border:none;
+    border-radius:6px;
+    font-size:16px;
+}
+
+button{
+    width:100%;
+    padding:14px;
+    background:#ff6b35;
+    color:#fff;
+    border:none;
+    border-radius:6px;
+    cursor:pointer;
+    font-size:17px;
+    transition:.3s;
+}
+
+button:hover{
+    background:#e85a28;
+}
+
+#status{
+    margin-top:15px;
+    text-align:center;
+    font-weight:bold;
+}
+
+footer{
+    background:#222;
+    color:#fff;
+    text-align:center;
+    padding:20px;
+}
+
+@media(max-width:768px){
+
+header h1{
+    font-size:2.2rem;
+}
+
+header p{
+    font-size:1rem;
+}
+
+.section-title{
+    font-size:1.8rem;
+}
+
+}
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<div class="container">
+
+<h1>Dr. Ali Clinic</h1>
+
+<p>Your Health Is Our Priority | Pasrur, Punjab</p>
+
+<a href="#contact" class="btn">
+Book Appointment
+</a>
+
+</div>
+
+</header>
+
+<section class="services">
+
+<div class="container">
+
+<h2 class="section-title">
+Our Services
+</h2>
+
+<div class="services-grid">
+
+<div class="card">
+<h3>General Checkup</h3>
+<p>Complete health checkup with experienced doctor and modern medical care.</p>
+</div>
+
+<div class="card">
+<h3>Emergency Care</h3>
+<p>Fast emergency treatment with quality healthcare services.</p>
+</div>
+
+<div class="card">
+<h3>Lab Tests</h3>
+<p>Blood tests, medical reports and diagnostic services available.</p>
+</div>  
+<div class="card">
+<h3>Medical Consultation</h3>
+<p>Professional consultation for fever, diabetes, blood pressure and other common health problems.</p>
+</div>
+
+</div>
+</div>
+</section>
+
+<section class="about">
+
+<div class="container">
+
+<h2 class="section-title">About Our Clinic</h2>
+
+<p>
+Dr. Ali Clinic provides trusted healthcare services for individuals and families.
+Our mission is to deliver quality medical treatment with compassion, modern facilities,
+and affordable healthcare for everyone.
+</p>
+
+</div>
+
+</section>
+
+<section class="contact" id="contact">
+
+<div class="container">
+
+<h2>Book an Appointment</h2>
+
+<p>Fill out the form below and we'll contact you shortly.</p>
+
+<form id="contactForm"
+action="https://formspree.io/f/xvzjebrw"
+method="POST">
+
+<input
+type="text"
+name="name"
+placeholder="Your Name"
+required>
+
+<input
+type="tel"
+name="phone"
+placeholder="Phone Number"
+required>
+
+<input
+type="email"
+name="email"
+placeholder="Email Address"
+required>
+
+<textarea
+name="message"
+rows="5"
+placeholder="Your Message"
+required></textarea>
+
+<button type="submit">
+Send Message
+</button>
+
+<p id="status"></p>
+
+</form>
+
+</div>
+
+</section>
+
+<footer>
+
+<p>
+©️ 2026 Dr. Ali Clinic | Pasrur, Punjab
+</p>
+
+<p>
+Call: 0300-1234567
+</p>
+
+</footer>
+
+<script>
+
+const form=document.getElementById("contactForm");
+const status=document.getElementById("status");
+
+form.addEventListener("submit",async function(e){
+
+e.preventDefault();
+
+const data=new FormData(form);
+
+try{
+
+const response=await fetch(form.action,{
+method:"POST",
+body:data,
+headers:{
+'Accept':'application/json'
+}
+});
+
+if(response.ok){
+
+status.style.color="#90EE90";
+status.innerHTML="✅ Appointment request sent successfully!";
+form.reset();
+
+}else{
+
+status.style.color="yellow";
+status.innerHTML="❌ Something went wrong.";
+
+}
+
+}catch(error){
+
+status.style.color="red";
+status.innerHTML="⚠ Network Error.";
+
+}
+
+});
+
+const cards=document.querySelectorAll(".card");
+
+const observer=new IntersectionObserver(entries=>{
+
+entries.forEach(entry=>{
+
+if(entry.isIntersecting){
+
+entry.target.style.opacity="1";
+entry.target.style.transform="translateY(0)";
+
+}
+
+});
+
+});
+
+cards.forEach(card=>{
+
+card.style.opacity="0";
+card.style.transform="translateY(40px)";
+card.style.transition="0.6s";
+
+observer.observe(card);
+
+});
+
+</script>
+
+</body>
+</html>
